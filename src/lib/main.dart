@@ -20,6 +20,9 @@ void main() {
 
   //getIt.registerSingleton(HwListPDTable());
   //getIt.registerSingleton(HWListView());
+  getIt.registerSingleton(HwListPDTable());
+
+
   runApp(const App());
 }
 

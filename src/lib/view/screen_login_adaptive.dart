@@ -13,13 +13,14 @@ class LoginApative extends StatelessWidget {
     String platform  = '';
     const  isWebJS   = bool.fromEnvironment('dart.library.js_util');
     const  isWebWasm = bool.fromEnvironment('dart.tool.dart2wasm');
+    
 
     if (isWebJS || isWebWasm) {
       platform = isWebWasm ? 'WEB (WebAssembly)' : 'WEB (JavaScript)';
     } else {
-      platform = '${Platform.operatingSystem}: ${Platform.operatingSystemVersion}';
+      platform = '${Platform.operatingSystem} - ${Platform.operatingSystemVersion}';
     }
-    return 'Платформа $platform';
+    return 'Платформа $platform\nAPI: $linkAPI';
   }
 
   @override

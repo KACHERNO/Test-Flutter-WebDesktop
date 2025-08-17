@@ -1,6 +1,8 @@
 part of 'auth_bloc.dart';
 
-const linkAPI = 'https://hoqdughzdgcwvqwmdviq.hasura.ap-south-1.nhost.run/v1/graphql';
+// const linkAPI = 'https://hoqdughzdgcwvqwmdviq.hasura.ap-south-1.nhost.run/v1/graphql';
+
+const linkAPI = 'https://hasura.kacherno.online/v1/graphql';
 
 //
 // STATE: [ Authenticated, NotAuthenticated, Loading ]
@@ -16,11 +18,11 @@ class AuthState {
    get getSession      => _session;
    String? get getError        => _errorMessage;
    String? get getAccessToken  => _session?['accessToken'];
-   String? get getRefreshToken => _session?['refreshToken'];
+  //  String? get getRefreshToken => _session?['refreshToken'];
    GraphQLClient get getClient       => _client;
-   String? get getDisplayName  => _session?['user']['displayName'];
-   String? get getDefautRole   => _session?['user']['defaultRole'];
-   String? get getEmail        => _session?['user']['email'];
+  //  String? get getDisplayName  => _session?['user']['displayName'];
+  //  String? get getDefautRole   => _session?['user']['defaultRole'];
+  //  String? get getEmail        => _session?['user']['email'];
 
 /*
 "user": {
@@ -68,7 +70,7 @@ class Authenticated     extends AuthState {
   String? currentUser;
   Authenticated(Map<String,dynamic> session){
     super._session = session;
-    currentUser = session['user']['displayName'];
+    // currentUser = session['user']['displayName'];
     changeAuthLink();
     changeClient();
   }

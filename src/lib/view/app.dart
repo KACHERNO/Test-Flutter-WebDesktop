@@ -12,6 +12,10 @@ import '../theme/theme.dart';
 import 'body_hwlist_pdtable.dart';
 import 'screen_login_adaptive.dart';
 import 'body_home.dart';
+//import 'package:get_it/get_it.dart';
+
+//GetIt getIt = GetIt.instance;
+
 
 class App extends StatelessWidget {
   /// Creates a const main application widget.
